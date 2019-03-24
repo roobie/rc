@@ -1,0 +1,16 @@
+
+
+EDITOR=nvim
+NIX_BUILD_SHELL=fish
+
+if [ -z $SSH_AGENT_PID ] ; then
+    if [ ps -p $SSH_AGENT_PID > /dev/null ]
+    then
+        echo "SSH agent already running"
+    else
+        eval "$(ssh-agent -s)"
+    fi
+fi
+
+# emacs --daemon &
+# tmux new-session -d -s main

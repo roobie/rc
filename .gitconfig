@@ -1,0 +1,5 @@
+[user]
+	email = bjorn.roberg@gmail.com
+	name = BR
+[push]
+	default = matching

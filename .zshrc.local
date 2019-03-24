@@ -1,0 +1,18 @@
+if [[ -a "$HOME/.zprofile" ]] ; then
+    source $HOME/.zprofile
+fi
+
+
+if type "VBoxClient-all" > /dev/null; then
+  killall VBoxClient &> /dev/null
+  VBoxClient-all 2>&1 /dev/null
+fi
+
+alias gs="git status"
+alias grb="git rebase --interactive"
+alias gca="git commit -am"
+alias glog="git log --all --decorate --oneline --graph"
+alias ag="/usr/bin/ag"
+alias gbstat="echo MERGED && git branch --merged && echo NO-MERGED && git branch --no-merged"
+
+alias l='ls -l --color -h --group-directories-first'

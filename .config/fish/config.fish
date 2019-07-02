@@ -71,3 +71,12 @@ end
 function gcnb
     gc -b $argv
 end
+
+function xkb-us
+    setxkbmap us -option ctrl:nocaps
+end
+
+function xkb-se
+    setxkbmap se -option ctrl:nocaps
+end
+
